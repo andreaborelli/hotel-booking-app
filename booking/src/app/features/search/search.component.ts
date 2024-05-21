@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Hotel } from 'src/app/model/hotel';
+import { CartService } from 'src/app/core/services/cart.service';
+import { Hotel, Room } from 'src/app/model/hotel';
 
 @Component({
   selector: 'app-search',
@@ -14,9 +15,12 @@ export class SearchComponent implements OnInit {
   active: Hotel | undefined; // Variabile per memorizzare l'hotel attivo
   activeImage: string | undefined; // Variabile per memorizzare l'immagine attiva
 
-  
 
-  constructor(private http: HttpClient) {
+
+  constructor(
+    public cart: CartService,
+    private http: HttpClient
+  ) {
     // Il costruttore inietta il servizio HttpClient
   }
 
@@ -54,5 +58,10 @@ export class SearchComponent implements OnInit {
     ${email}
     ${msg}
     ${this.active!.email}`);// {} espressione di template string}
+  }
+
+  addToCart(room: Room, active: Hotel) { // Metodo per aggiungere un hotel al carrello
+    this.cart.addToCart(active, room); // Chiama il metodo addToCart del servizio CartService
+    // console.log('Adding to cart:', room, active); // Stampa la stanza e l'hotel attivo nella console
   }
 }
