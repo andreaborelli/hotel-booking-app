@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CartItem } from 'src/app/model/cart-item';
 import { Hotel, Room } from 'src/app/model/hotel';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,9 @@ export class CartService {
 
   items: CartItem[] = []; // Array per memorizzare gli elementi del carrello
 
-  constructor() { }
+  constructor(
+      private auth: AuthService
+  ) { }
 
   addToCart(hotel: Hotel, room:Room) { // Metodo per aggiungere un elemento al carrello
       // this.items.push({
@@ -32,6 +35,10 @@ export class CartService {
   }
 
   proceed(){
-    window.alert(this.items.length);
+    window.alert(`
+    Total item: ${this.items.length}
+    Order: ${this.auth.data?.name}
+    `
+  );
   }
 }

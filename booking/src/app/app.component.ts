@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CartService } from './core/services/cart.service';
+import { AuthService } from './core/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ export class AppComponent {
   title = 'booking';
 
   constructor(
-    public cart: CartService
+    public cart: CartService,
+    public auth: AuthService
     ) {
 
    }
