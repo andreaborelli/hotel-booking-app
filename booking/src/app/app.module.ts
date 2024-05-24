@@ -12,6 +12,13 @@ import { IntToArrayPipe } from './shared/pipes/int-to-array.pipe';
 import { HotelListComponent } from './features/search/components/hotel-list/hotel-list.component';
 import { HotelFormComponent } from './features/search/components/hotel-form/hotel-form.component';
 import { SeparatorComponent } from './shared/components/separator/separator.component';
+import { GmapComponent } from './features/search/components/gmap/gmap.component';
+import { ContactFormComponent } from './features/search/components/contact-form/contact-form.component';
+import { RatesComponent } from './features/search/components/rates/rates.component';
+import { ReservationsComponent } from './features/search/components/reservations/reservations.component';
+import { ServicesComponent } from './features/search/components/services/services.component';
+import { ImageGalleryComponent } from './features/search/components/image-gallery/image-gallery.component';
+import { StarsComponent } from './features/search/components/stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +29,14 @@ import { SeparatorComponent } from './shared/components/separator/separator.comp
     IntToArrayPipe,
     HotelListComponent,
     HotelFormComponent,
-    SeparatorComponent
+    SeparatorComponent,
+    GmapComponent,
+    ContactFormComponent,
+    RatesComponent,
+    ReservationsComponent,
+    ServicesComponent,
+    ImageGalleryComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule,
