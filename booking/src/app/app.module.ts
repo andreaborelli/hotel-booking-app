@@ -19,6 +19,7 @@ import { ReservationsComponent } from './features/search/components/reservations
 import { ServicesComponent } from './features/search/components/services/services.component';
 import { ImageGalleryComponent } from './features/search/components/image-gallery/image-gallery.component';
 import { StarsComponent } from './features/search/components/stars/stars.component';
+import { CardComponent } from './shared/components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { StarsComponent } from './features/search/components/stars/stars.compone
     ReservationsComponent,
     ServicesComponent,
     ImageGalleryComponent,
-    StarsComponent
+    StarsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

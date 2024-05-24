@@ -1,54 +1,35 @@
 <!--CONTENT-->
 <div class="wrapper three-cols">
   <!--SIDEBAR-->
-  <div class="card side-bar scrollable">
-    <div class="title">Search</div>
-    <div class="content">
+  <app-card title="Search" customCls="side-bar" [isScrollable]="true">
+    <app-hotel-form [text]="text" (search)="searchHotels($event)">
+    </app-hotel-form>
 
-      <app-hotel-form
-        [text]="text"
-        (search)="searchHotels($event)"
-      >
-      </app-hotel-form>
+    <!-- <pre>{{hotels | json}}</pre> -->
 
-      <!-- <pre>{{hotels | json}}</pre> -->
+    <app-separator></app-separator>
 
-      <app-separator></app-separator>
-
-
-    <app-hotel-list
-      [hotels]="hotels"
-      [text]="text"
-      [active]="active"
-      (setActive)="setActive($event)"
-    >
-
+    <app-hotel-list [hotels]="hotels" [text]="text" [active]="active" (setActive)="setActive($event)">
     </app-hotel-list>
+  </app-card>
+  <!-- <pre>{{active | json}}</pre> -->
 
-      <!-- <pre>{{active | json}}</pre> -->
-
-    </div>
-  </div>
 
   <!--MAP-->
-  <div class="card map">
-    <div>
+  <app-card customCls="map" [padding]="false">
 
-<app-gmap [active]="active"></app-gmap>
+    <app-gmap [active]="active"></app-gmap>
 
-    </div>
-  </div>
+  </app-card>
 
 
   <!--INFO BOX-->
-  <div class="card">
-    <div class="content center">
-      <!--<img src="https://picsum.photos/400/200/?image=12" width="100%" height="200">-->
+  <app-card [centeredContent]="true">
+    <!--<img src="https://picsum.photos/400/200/?image=12" width="100%" height="200">-->
+    <app-separator></app-separator>
 
-      <app-separator></app-separator>
-
-     <app-rates [active]="active"></app-rates>
-      <!-- <div>
+    <app-rates [active]="active"></app-rates>
+    <!-- <div>
         <i *ngFor="let star of [0,0,0,0,0]; let i = index"
         class="icon"
         [ngClass]="{
@@ -57,41 +38,29 @@
           }"
         ></i>
       </div> -->
+    <app-stars [stars]="active?.stars ?? 0"></app-stars>
 
-      <app-stars [stars]="active?.stars ?? 0"></app-stars>
+    <app-reservations [active]="active" (addToCart)="cart.addToCart(active!, $event)">
+    </app-reservations>
 
+  </app-card>
 
-
-      <br>
-
-      <app-reservations [active]="active" (addToCart)="cart.addToCart(active!, $event)">
-
-      </app-reservations>
-
-    </div>
-
-  </div>
   <!--IMAGE GALLERY-->
-  <div class="card gallery scrollable">
-
-    <app-image-gallery [active]="active" [activeImage]="activeImage"></app-image-gallery>
-
-  </div>
+  <app-card [isScrollable]="true" customCls="gallery">
+    <app-image-gallery [active]="active" [activeImage]="activeImage">
+    </app-image-gallery>
+  </app-card>
 
   <!--SERVICES-->
-  <div class="card services scrollable">
-    <div class="title">Services</div>
+  <app-card customCls="services" [isScrollable]="true" title="Services">
+    <app-services [active]="active">
+    </app-services>
 
-    <app-services [active]="active"></app-services>
-
-  </div>
+  </app-card>
 
   <!--CONTACT FORM-->
-  <div class="card contact">
-    <div class="title">Contacts</div>
-    <div class="content">
-      <app-contact-form (send)="sendEmail($event)"></app-contact-form>
-    </div>
-  </div>
+  <app-card customCls="contact" title="Contacts">
+    <app-contact-form (send)="sendEmail($event)"></app-contact-form>
+  </app-card>
 
 </div>
