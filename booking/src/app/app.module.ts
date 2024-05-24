@@ -20,6 +20,7 @@ import { ServicesComponent } from './features/search/components/services/service
 import { ImageGalleryComponent } from './features/search/components/image-gallery/image-gallery.component';
 import { StarsComponent } from './features/search/components/stars/stars.component';
 import { CardComponent } from './shared/components/card/card.component';
+import { NoResultsComponent } from './features/search/no-results.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CardComponent } from './shared/components/card/card.component';
     ServicesComponent,
     ImageGalleryComponent,
     StarsComponent,
-    CardComponent
+    CardComponent,
+    NoResultsComponent
   ],
   imports: [
     BrowserModule,
