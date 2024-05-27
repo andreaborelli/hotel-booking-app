@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Hotel } from 'src/app/model/hotel';
 
 @Component({
-  selector: 'app-rates',
+  selector: 'app-rate',
   template: `
    <div class="font-superbig">
         {{active?.rate}}
@@ -12,7 +12,7 @@ import { Hotel } from 'src/app/model/hotel';
   styles: [
   ]
 })
-export class RatesComponent {
+export class RateComponent {
 
   @Input() active: Hotel | undefined
 
