@@ -21,7 +21,8 @@ textarea.error, select.error  {
 
 button[type=submit] {
   width: 100%;
-  background-color: #003B95;
+  background-color: #4d6ea2
+  ;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -35,7 +36,8 @@ button[disabled] {
 }
 
 input[type=submit]:hover {
-  background-color: #0037a8;
+  background-color: #617eac;
+
 }
 
 

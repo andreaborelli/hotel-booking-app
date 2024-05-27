@@ -1,12 +1,11 @@
 html, body {
-  background-color: #003B95;
+  background-color:#3A5E98;
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 .icon {
-  font-size: 40px;
-  cursor: pointer;
+  font-size: 40px
 }
 
 .font-superbig {
@@ -31,4 +30,8 @@ html, body {
 
 .center {
   text-align: center;
+}
+a {
+  color: #3D2A44;
+  text-decoration: none;
 }
