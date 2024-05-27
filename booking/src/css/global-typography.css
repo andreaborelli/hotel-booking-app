@@ -5,7 +5,11 @@ html, body {
 }
 
 .icon {
-  font-size: 40px
+  font-size: 40px;
+  cursor: pointer;
+}
+.ion-ios-cart{
+  cursor: pointer;
 }
 
 .font-superbig {
