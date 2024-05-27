@@ -11,10 +11,4 @@ export class AppComponent {
 
   title = 'booking';
 
-  constructor(
-    public cart: CartService,
-    public auth: AuthService
-    ) {
-
-   }
 }

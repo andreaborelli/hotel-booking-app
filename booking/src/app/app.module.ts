@@ -19,6 +19,7 @@ import { ImageGalleryComponent } from './features/search/components/image-galler
 import { StarsComponent } from './features/search/components/stars/stars.component';
 import { NoResultsComponent } from './features/search/no-results.component';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -35,14 +36,16 @@ import { SharedModule } from './shared/shared.module';
     ServicesComponent,
     ImageGalleryComponent,
     StarsComponent,
-    NoResultsComponent
+    NoResultsComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
