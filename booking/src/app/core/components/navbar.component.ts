@@ -8,7 +8,7 @@ import { CartService } from '../services/cart.service';
   <!--navigation bar-->
   <div class="navigation" *ngIf="auth.isLogged()">
     <div class="horiz-grid">
-      <div class="logo">BOOKING</div>
+      <div class="logo" routerLink="search">BOOKING</div>
       <div class="horiz-grid">
         <span class="btn" routerLink="search" routerLinkActive="active">SEARCH</span>
         <span class="btn" routerLink="cart" routerLinkActive="active">CART ({{cart.items.length}})</span>

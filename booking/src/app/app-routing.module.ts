@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SearchComponent } from './features/search/search.component';
-import { LoginComponent } from './features/login/login.component';
-import { CartComponent } from './features/cart/cart.component';
 import { authGuard } from './core/services/auth.guard';
-import { NoResultsComponent } from './features/search/no-results.component';
 
 const routes: Routes = [
-  { path: 'search', component: SearchComponent, canActivate: [authGuard]}, // authGuard open the page only if the user is logged in
-  { path: 'login', component: LoginComponent },
-  { path: 'cart', component: CartComponent, canActivate: [authGuard]},
-  { path: 'no-results', component: NoResultsComponent, canActivate: [authGuard] },
+  // { path: 'search', component: SearchComponent, canActivate: [authGuard]}, // authGuard open the page only if the user is logged in
+  // { path: 'login', component: LoginComponent },
+  // { path: 'cart', component: CartComponent, canActivate: [authGuard]},
+  // { path: 'no-results', component: NoResultsComponent, canActivate: [authGuard] },
+  // { path: '**', redirectTo: 'search' }
+
+  // Lazy loading
+  { path: 'search', loadChildren: () => import('./features/search/search.module').then(m => m.SearchModule), canActivate: [authGuard]},
+  { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule)},
+  { path: 'cart', loadChildren: () => import('./features/cart/cart.module').then(m => m.CartModule), canActivate: [authGuard]},
   { path: '**', redirectTo: 'search' }
 ];
 

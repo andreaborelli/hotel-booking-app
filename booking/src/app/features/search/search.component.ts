@@ -16,8 +16,6 @@ export class SearchComponent implements OnInit {
   active: Hotel | undefined; // Variabile per memorizzare l'hotel attivo
   activeImage: string | undefined; // Variabile per memorizzare l'immagine attiva
 
-
-
   constructor(
     public cart: CartService,
     private http: HttpClient,
@@ -43,7 +41,7 @@ export class SearchComponent implements OnInit {
     this.http.get<Hotel[]>(`http://localhost:3000/hotels?city=` + text) // Effettua una richiesta HTTP GET all'URL specificato e ottiene un array di oggetti Hotel
       .subscribe(result => { // Iscrizione all'osservabile per ottenere i risultati della richiesta
         if (!result.length) {
-          this.router.navigateByUrl('no-results'); // Se non ci sono risultati, reindirizza alla pagina no-results
+          this.router.navigateByUrl('search/no-results'); // Se non ci sono risultati, reindirizza alla pagina no-results
           return; // Termina la funzione
         } // Se non ci sono risultati
         this.hotels = result; // Assegna i risultati all'array hotels

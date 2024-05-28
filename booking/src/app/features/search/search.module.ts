@@ -12,9 +12,8 @@ import { RateComponent } from './components/rate/rate.component';
 import { StarsComponent } from './components/stars/stars.component';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { RouterModule } from '@angular/router';
-
-
+import { NoResultsComponent } from './no-results.component';
+import { SearchRoutingModule } from './search-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,14 +27,14 @@ import { RouterModule } from '@angular/router';
     HotelListComponent,
     RateComponent,
     StarsComponent,
-
-
+    NoResultsComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     SharedModule, // vengono utilizzati i componenti di questo modulo
-    RouterModule
+    // RouterModule,
+    SearchRoutingModule
   ]
 })
 export class SearchModule { }
