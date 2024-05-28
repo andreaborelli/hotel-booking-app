@@ -1,45 +1,59 @@
-## Booking: static demo 
+# Hotel Booking App
 
-Questo progetto contiene:
+This project is developed as part of the Angular Fundamentals course by Fabio Biondi. The Hotel Booking App allows users to search for hotels, select and add them to a cart, and contact hotels through a dedicated module. User authentication is required to access the app functionalities.
 
-* Le pagine "statiche" del progetto (HTML e CSS)
-* Il webserver con le API REST che saranno utilizzate nel progetto
+## Table of Contents
 
----
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-## Installazione
+## Features
 
-1) Apri il terminale nella root del progetto e installa le dipendenze usando il comando `npm install`
+- **Hotel Search**: Users can search for hotels based on various criteria.
+- **Hotel Selection**: Users can select hotels and add them to their cart.
+- **Contact Module**: Users can contact the selected hotel through a dedicated contact form.
+- **User Authentication**: Users must be logged in to access the app functionalities.
 
----
+## Installation
 
-2) Avvia il webserver per visualizzare le pagine statiche: `npm run start`
-Le pagine disponibili sono 
+To get a local copy up and running, follow these simple steps:
 
-* http://127.0.0.1:8080/search.html
-* http://127.0.0.1:8080/login.html
-* http://127.0.0.1:8080/cart.html
+### Prerequisites
 
----
+- Node.js and npm installed on your machine.
+- Angular CLI installed globally (`npm install -g @angular/cli`).
 
-3) Avvia il webserver REST: `npm run server`.
+### Steps
 
-Avrai a disposizione le seguenti API:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/andreaborelli/hotel-booking-app.git
+2. Navigate to the project directory:
+   ```sh
+   cd hotel-booking-app
+3. Install dependencies:
+   ```sh
+    npm install
+4. Install JSON Server:
+   ```sh
+   npm install json-server --save-dev
+6. uno qui
+7. uno qui
+8. uno qui
+9. uno qui
+10. ddskldkl
+11. nkjdnklndkls
+12. 
 
-**Search hotels list by text**
 
-* http://localhost:3000/hotels?q=Milan
-* http://localhost:3000/hotels?q=MILAn
-* http://localhost:3000/hotels?q=MI
 
-**Get hotel info by ID**
 
-* http://localhost:3000/hotels/1
-* http://localhost:3000/hotels/2
 
----
 
-### Link utili
 
-* [Ionicons](https://ionicons.com/)
-* [json-server](https://github.com/typicode/json-server)
+
+
