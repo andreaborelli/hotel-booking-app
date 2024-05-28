@@ -37,7 +37,7 @@ export class CartService {
   proceed(){
     window.alert(`
     Total item: ${this.items.length}
-    Order: ${this.auth.data?.name}
+    Order: ${this.auth.getUsername()}
     `
   );
   }

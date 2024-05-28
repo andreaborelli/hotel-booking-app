@@ -51,6 +51,7 @@ this.http.get<Auth>(`http://localhost:3000/login`, { params }) // call http requ
     this.data = res;
     localStorage.setItem('authenticated', 'true'); // set authenticated to true
     localStorage.setItem('userData', JSON.stringify(res)); // set data to local storage
+    localStorage.setItem('username', user); // set username to local storage
     this.router.navigateByUrl('search'); // redirect to search page after login
   }
 });
@@ -60,11 +61,15 @@ logout() {
 this.data = null;
 localStorage.removeItem('authenticated'); // remove authenticated from local storage
 localStorage.removeItem('userData'); // remove data from local storage
+localStorage.removeItem('username'); // remove username from local storage
 this.router.navigateByUrl('login'); // redirect to login page after logout
 }
 
 isLogged() {
   return !!localStorage.getItem('authenticated'); // check if authenticated is present is logged true else false
   // return !!(this.data && this.data.token); // check if token is present is logged true else false
+}
+getUsername() {
+  return localStorage.getItem('username'); // get username from local storage and view it
 }
 }

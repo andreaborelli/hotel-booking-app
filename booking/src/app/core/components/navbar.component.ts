@@ -14,7 +14,8 @@ import { CartService } from '../services/cart.service';
         <span class="btn" routerLink="cart" routerLinkActive="active">CART ({{cart.items.length}})</span>
         <span class="btn" (click)="auth.logout()">LOGOUT</span>
       </div>
-      <em>{{auth.data?.name}}</em>
+      <!-- <em>{{auth.data?.name}}</em> -->
+      <em>{{auth.getUsername()}}</em>
     </div>
   </div>
   `,
