@@ -14,7 +14,12 @@ error: HttpErrorResponse | null = null; // error type HttpErrorResponse
 constructor(
   private http: HttpClient,
   private router: Router
-) {}
+) {
+  const userData = localStorage.getItem('userData'); // get authenticated from local storage
+  if (userData) {
+    this.data = JSON.parse(userData); // parse data
+  }
+}
 
 login({user, pass}: {user: string, pass: string}) { // login function
   this.error = null; // reset error
@@ -45,6 +50,7 @@ this.http.get<Auth>(`http://localhost:3000/login`, { params }) // call http requ
   } else {
     this.data = res;
     localStorage.setItem('authenticated', 'true'); // set authenticated to true
+    localStorage.setItem('userData', JSON.stringify(res)); // set data to local storage
     this.router.navigateByUrl('search'); // redirect to search page after login
   }
 });
@@ -53,6 +59,7 @@ this.http.get<Auth>(`http://localhost:3000/login`, { params }) // call http requ
 logout() {
 this.data = null;
 localStorage.removeItem('authenticated'); // remove authenticated from local storage
+localStorage.removeItem('userData'); // remove data from local storage
 this.router.navigateByUrl('login'); // redirect to login page after logout
 }
 
