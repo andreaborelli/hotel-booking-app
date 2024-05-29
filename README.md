@@ -7,7 +7,6 @@ This project is developed as part of the Angular Fundamentals course by Fabio Bi
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
@@ -41,13 +40,37 @@ To get a local copy up and running, follow these simple steps:
 4. Install JSON Server:
    ```sh
    npm install json-server --save-dev
-6. uno qui
-7. uno qui
-8. uno qui
-9. uno qui
-10. ddskldkl
-11. nkjdnklndkls
-12. 
+5. Start JSON Server:
+   ```sh
+   npm run server
+6. In a new terminal, run the app:
+   ```sh
+   ng serve
+7. Open your browser and navigate to http://localhost:4200/
+
+## Usage
+
+Once the app is running, follow these steps:
+
+- **Login**: Use the integrated login system to access the app.
+- **Search Hotels**: Use the search functionality to find hotels that meet your criteria.
+- **Select Hotels**: Add hotels to your cart for further actions.
+- **Contact Hotels**: Use the contact module to reach out to selected hotels.
+
+## License
+Distributed under the MIT License. See LICENSE for more information.
+
+## Demo
+You can view the HTML and CSS for the app at the following link: [HTML/CSS Demo](https://andreaborelli.github.io/hotel-booking-app-view/search.html)
+
+## Acknowledgments
+[Fabio Biondi](https://www.fabiobiondi.dev/) for the amazing Angular Fundamentals course.
+All contributors and open-source libraries used in this project.
+
+
+
+
+   
 
 
 
