@@ -8,6 +8,7 @@ This project is developed as part of the Angular Fundamentals course by Fabio Bi
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
+- [Demo](#demo)
 - [Acknowledgments](#acknowledgments)
 
 ## Features
