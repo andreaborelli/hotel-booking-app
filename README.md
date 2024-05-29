@@ -1,45 +1,83 @@
-## Booking: static demo 
+# Hotel Booking App
 
-Questo progetto contiene:
+This project is developed as part of the Angular Fundamentals course by [Fabio Biondi](https://www.fabiobiondi.dev/). The Hotel Booking App allows users to search for hotels, select and add them to a cart, and contact hotels through a dedicated module. User authentication is required to access the app functionalities.
 
-* Le pagine "statiche" del progetto (HTML e CSS)
-* Il webserver con le API REST che saranno utilizzate nel progetto
+## Table of Contents
 
----
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Demo](#demo)
+- [Acknowledgments](#acknowledgments)
 
-## Installazione
+## Features
 
-1) Apri il terminale nella root del progetto e installa le dipendenze usando il comando `npm install`
+- **Hotel Search**: Users can search for hotels based on various criteria.
+- **Hotel Selection**: Users can select hotels and add them to their cart.
+- **Contact Module**: Users can contact the selected hotel through a dedicated contact form.
+- **User Authentication**: Users must be logged in to access the app functionalities.
 
----
+## Installation
 
-2) Avvia il webserver per visualizzare le pagine statiche: `npm run start`
-Le pagine disponibili sono 
+To get a local copy up and running, follow these simple steps:
 
-* http://127.0.0.1:8080/search.html
-* http://127.0.0.1:8080/login.html
-* http://127.0.0.1:8080/cart.html
+### Prerequisites
 
----
+- Node.js and npm installed on your machine.
+- Angular CLI installed globally (`npm install -g @angular/cli`).
 
-3) Avvia il webserver REST: `npm run server`.
+### Steps
 
-Avrai a disposizione le seguenti API:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/andreaborelli/hotel-booking-app.git
+2. Navigate to the project directory:
+   ```sh
+   cd hotel-booking-app
+3. Install dependencies:
+   ```sh
+    npm install
+4. Install JSON Server:
+   ```sh
+   npm install json-server --save-dev
+5. Start JSON Server:
+   ```sh
+   npm run server
+6. In a new terminal, run the app:
+   ```sh
+   ng serve
+7. Open your browser and navigate to http://localhost:4200/
 
-**Search hotels list by text**
+## Usage
 
-* http://localhost:3000/hotels?q=Milan
-* http://localhost:3000/hotels?q=MILAn
-* http://localhost:3000/hotels?q=MI
+Once the app is running, follow these steps:
 
-**Get hotel info by ID**
+- **Login**: Use the integrated login system to access the app.
+- **Search Hotels**: Use the search functionality to find hotels that meet your criteria.
+- **Select Hotels**: Add hotels to your cart for further actions.
+- **Contact Hotels**: Use the contact module to reach out to selected hotels.
 
-* http://localhost:3000/hotels/1
-* http://localhost:3000/hotels/2
+## License
+Distributed under the MIT License. See LICENSE for more information.
 
----
+## Demo
+You can view the HTML and CSS for the app at the following link: [HTML/CSS Demo](https://andreaborelli.github.io/hotel-booking-app-view/search.html)
 
-### Link utili
+## Acknowledgments
+[Fabio Biondi](https://www.fabiobiondi.dev/) for the amazing Angular Fundamentals course.
+All contributors and open-source libraries used in this project.
 
-* [Ionicons](https://ionicons.com/)
-* [json-server](https://github.com/typicode/json-server)
+
+
+
+   
+
+
+
+
+
+
+
+
+
