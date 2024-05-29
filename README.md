@@ -1,6 +1,6 @@
 # Hotel Booking App
 
-This project is developed as part of the Angular Fundamentals course by Fabio Biondi. The Hotel Booking App allows users to search for hotels, select and add them to a cart, and contact hotels through a dedicated module. User authentication is required to access the app functionalities.
+This project is developed as part of the Angular Fundamentals course by [Fabio Biondi](https://www.fabiobiondi.dev/). The Hotel Booking App allows users to search for hotels, select and add them to a cart, and contact hotels through a dedicated module. User authentication is required to access the app functionalities.
 
 ## Table of Contents
 
