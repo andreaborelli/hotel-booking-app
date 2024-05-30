@@ -62,7 +62,7 @@ Once the app is running, follow these steps:
 Distributed under the MIT License. See LICENSE for more information.
 
 ## Demo
-You can view the HTML and CSS for the app at the following link: [HTML/CSS Demo](https://andreaborelli.github.io/hotel-booking-app-view/search.html)
+You can view the HTML and CSS for the app at the following link: [HTML/CSS Demo](https://andreaborelli.github.io/hotel-booking-app-view/search.html/?target=_blank))
 
 ## Acknowledgments
 [Fabio Biondi](https://www.fabiobiondi.dev/) for the amazing Angular Fundamentals course.
