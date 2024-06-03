@@ -1,0 +1,25 @@
+.footer {
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+.horiz-grid-footer {
+  padding: 10px 0;
+  width: 600px;
+  margin: 0 auto;
+}
+.footer .logo {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.copy{
+  background-color: white;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.copy p{
+  color: #3A5E98;
+}
+
