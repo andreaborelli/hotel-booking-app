@@ -8,7 +8,6 @@ import { Component, Input } from '@angular/core';
     <app-card customCls="contact" title="Ottieni le migliori offerte">
       <app-news-letter-form (news)="newsLetter($event)"></app-news-letter-form>
     </app-card>
-
     </div>
   </footer>
   `,

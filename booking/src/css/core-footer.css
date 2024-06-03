@@ -13,4 +13,13 @@
   font-weight: bold;
   cursor: pointer;
 }
+.copy{
+  background-color: white;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.copy p{
+  color: #3A5E98;
+}
 

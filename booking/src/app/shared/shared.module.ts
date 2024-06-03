@@ -10,7 +10,7 @@ const components = [
   IntToArrayPipe,
   CardComponent,
   SeparatorComponent,
-  NewsLetterFormComponent,
+  NewsLetterFormComponent
 ];
 
 @NgModule({
