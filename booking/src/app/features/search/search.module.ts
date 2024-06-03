@@ -11,9 +11,9 @@ import { HotelListComponent } from './components/hotel-list/hotel-list.component
 import { RateComponent } from './components/rate/rate.component';
 import { StarsComponent } from './components/stars/stars.component';
 import { FormsModule } from '@angular/forms';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { NoResultsComponent } from './no-results.component';
 import { SearchRoutingModule } from './search-routing.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
