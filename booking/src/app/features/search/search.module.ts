@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { NoResultsComponent } from './no-results.component';
 import { SearchRoutingModule } from './search-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { FooterComponent } from 'src/app/core/components/footer.component';
+import { FooterCopyComponent } from './components/footer-copy/footer-copy.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     RateComponent,
     StarsComponent,
     NoResultsComponent,
+    FooterComponent,
+    FooterCopyComponent
   ],
   imports: [
     CommonModule,
