@@ -35,13 +35,19 @@ To get a local copy up and running, follow these simple steps:
 2. Navigate to the project directory:
    ```sh
    cd hotel-booking-app
+2. Open project in vscode:
+   ```sh
+   code .
+3. Install bootstrap and font-awesome dependencies:
+   ```sh
+    npm install bootstrap font-awesome
 3. Install dependencies:
    ```sh
     npm install
 4. Install JSON Server:
    ```sh
    npm install json-server --save-dev
-5. Start JSON Server:
+5. Start JSON Server new open terminal:
    ```sh
    npm run server
 6. In a new terminal, run the app:
